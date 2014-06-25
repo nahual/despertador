@@ -1,11 +1,17 @@
 package com.example.nahual.despertador;
 
-public class alarmas {
+import java.util.ArrayList;
+
+public class alarmas 
+{
+	ArrayList<alarma> listado = new ArrayList<alarma>();
 	
 	private static alarmas instance = null;
-	   protected alarmas() {
+	   protected alarmas() 
+	   {
 	   }
-	   public static alarmas getInstance() {
+	   public static alarmas getInstance() 
+	   {
 	      if(instance == null) {
 	         instance = new alarmas();
 	      }
