@@ -3,6 +3,9 @@ package com.example.nahual.despertador;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -10,9 +13,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.provider.Settings;
+import android.media.*;
 
 public class AgregarAlarma extends Activity {
+		
+	//Ringtone myRingtone = RingtoneManager.getRingtone(this, Settings.System.DEFAULT_RINGTONE_URI );
 
+	//myRingtone.play();
+	
+	Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+	
+	Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+	
+	r.play();
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
